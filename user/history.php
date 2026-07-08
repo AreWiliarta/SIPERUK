@@ -30,7 +30,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 // Pagination logic
 $page = (int)($_GET['page'] ?? 1);
 if ($page < 1) $page = 1;
-$limit = 10;
+$limit = 3;
 $offset = ($page - 1) * $limit;
 
 $count_stmt = $pdo->prepare("SELECT COUNT(*) FROM bookings WHERE user_id = ?");

@@ -33,7 +33,7 @@ if (!in_array($filter, ['PENDING', 'APPROVED', 'REJECTED'])) {
 // Pagination logic
 $page = (int)($_GET['page'] ?? 1);
 if ($page < 1) $page = 1;
-$limit = 10;
+$limit = 3;
 $offset = ($page - 1) * $limit;
 
 // Get Total Rows
